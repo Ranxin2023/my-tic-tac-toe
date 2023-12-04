@@ -64,3 +64,18 @@ code {
   background-color: red;
   /* Add any other red styles here */
 }
+
+.game-back {
+  background: #999;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: 20px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 64px;
+}

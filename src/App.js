@@ -219,7 +219,11 @@ export default function Game() {
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
   }
-
+  function handleBack() {
+    if (currentMove > 0) {
+      setCurrentMove(currentMove - 1)
+    }
+  }
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -238,6 +242,7 @@ export default function Game() {
       <div className='game-option'>
         <Option optionList={optionList} onClick={handleOption}></Option>
       </div>
+      <button className='game-back' onClick={handleBack}>Back</button>
       <div className='game-board'>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} boardSize={boardSize}></Board>
       </div>
