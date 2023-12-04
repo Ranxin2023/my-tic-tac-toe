@@ -235,7 +235,9 @@ export default function Game() {
 
   function handleBack() {
     if (currentMove > 0) {
-      setCurrentMove(currentMove - 1)
+      const nextHistory = [...history.slice(0, currentMove)]
+      setHistory(nextHistory)
+      setCurrentMove(nextHistory.length - 1)
     }
   }
 
